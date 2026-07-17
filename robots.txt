@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /orneksayfa.html
+Disallow: /google7733d3ecdfd99559.html
+
+Sitemap: https://dorukustundag.github.io/sitemap.xml
