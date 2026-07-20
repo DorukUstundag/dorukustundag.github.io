@@ -3,89 +3,23 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Projects</title>
+        <title>Projects — Doruk Üstündağ</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+        <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css" />
+        <link rel="stylesheet" href="assets/css/site.css">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
                 onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
 
         <style>
-            /* SPEED & VISIBILITY OPTIMIZATION */
-            body { opacity: 1 !important; visibility: visible !important; }
-            .preloader { display: none !important; }
-
-            /* STATIC HEADER NAVIGATION (Matches Talks Page) */
-            .navbar-header { float: left; }
-            
-            .btn-return-home {
-                display: inline-block;
-                margin-top: 12px;
-                padding: 8px 20px;
-                border: 2px solid #333;
-                background: #333;
-                color: #fff !important;
-                border-radius: 4px;
-                font-weight: 700;
-                text-transform: uppercase;
-                font-size: 12px;
-                transition: all 0.3s ease;
-            }
-            .btn-return-home:hover {
-                background: transparent;
-                color: #333 !important;
-                text-decoration: none;
-            }
-            .btn-return-home i { margin-right: 8px; }
-
-            .navbar-nav { margin-top: 12px; margin-bottom: 0; }
-            .navbar-nav li a {
-                border: 1px solid #333 !important;
-                padding: 8px 18px !important;
-                margin-left: 10px;
-                margin-right: 10px;
-                border-radius: 4px;
-                transition: all 0.3s ease;
-                text-transform: uppercase;
-                font-size: 12px;
-                font-weight: 700;
-                color: #333 !important;
-                background: transparent;
-            }
-            .navbar-nav li a:hover {
-                background: #333 !important;
-                color: #fff !important;
-            }
-
-            /* HERO HEADER */
-            .main-page-header {
-                padding: 80px 0 40px;
-                text-align: center;
-                background: #fdfdfd;
-                border-bottom: 1px solid #eee;
-            }
-            .main-page-header h1 {
-                font-weight: 700;
-                font-size: 42px;
-                text-transform: uppercase;
-                letter-spacing: 3px;
-                color: #222;
-                margin: 0;
-            }
-            .main-page-header .underline {
-                width: 60px;
-                height: 4px;
-                background: #333;
-                margin: 20px auto 0;
-            }
-
             /* PROJECTS SECTION */
             .projects-section { padding: 60px 0 80px; }
             
@@ -135,25 +69,24 @@
             }
             .tech-item {
                 font-size: 12px;
-                color: #888;
+                color: #666;
                 margin-right: 15px;
                 font-family: 'Courier New', Courier, monospace;
             }
 
-            .btn-project { 
-                background: transparent; 
-                border: 1px solid #333; 
-                color: #333; 
-                padding: 8px 20px; 
-                font-size: 11px; 
+            .btn-project {
+                background: transparent;
+                border: 1px solid #333;
+                color: #333;
+                padding: 8px 20px;
+                font-size: 11px;
                 font-weight: 700;
                 transition: 0.3s;
                 text-transform: uppercase;
                 border-radius: 4px;
             }
             .btn-project:hover { background: #333; color: #fff; text-decoration: none; }
-
-            .footer { padding: 40px 0; border-top: 1px solid #eee; }
+            .btn-project[aria-disabled="true"] { pointer-events: none; opacity: 0.6; cursor: default; }
         </style>
     </head>
     <body>
@@ -166,7 +99,8 @@
                             <nav class="navbar navbar-default" id="navmenu">
                                 <div class="container-fluid">
                                     <div class="navbar-header">
-                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="bs-example-navbar-collapse-1">
+                                            <span class="sr-only">Toggle navigation</span>
                                             <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                                         </button>
                                         <a class="btn-return-home" href="index.html">
@@ -177,7 +111,7 @@
                                         <ul class="nav navbar-nav navbar-right">
                                             <li><a href="research.html">Research</a></li>
                                             <li><a href="talks.html">Talks</a></li>
-                                            <li><a href="projects.html">Projects</a></li>
+                                            <li class="active"><a href="projects.html" aria-current="page">Projects</a></li>
                                             <li><a href="org_events.html">Events</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                         </ul>    
@@ -227,12 +161,12 @@
                         </div>
                         
                         <div class="project-card">
-                            <span class="project-tag">Undergradute Research Project</span>
+                            <span class="project-tag">Undergraduate Research Project</span>
                             <h3 class="project-title">Combinatorial Interpretation of Power Sum Polynomials and Various Divisibility Properties</h3>
                             <p class="project-description">Worked on "Combinatorial Interpretation of Power Sum Polynomials and Various Divisibility Properties" with Deniz Göksu (IZTECH) under the supervision of Assoc. Prof. Haydar Göral.</p>
                             <div class="tech-stack">
-                                <span class="tech-item"></i> Number Theory</span>
-                                <span class="tech-item"></i> SageMath</span>
+                                <span class="tech-item">Number Theory</span>
+                                <span class="tech-item">SageMath</span>
                                 <span class="tech-item">Combinatorics</span>
                             </div>
                         </div>
@@ -245,19 +179,19 @@
                                 <span class="tech-item"><i class="fa fa-bolt"></i> JavaScript</span>
                                 
                             </div>
-                            <a href="https://iyte-aritmetik.github.io/iytearitmetik/index.html" class="btn-project"><i class="fa fa-external-link"></i> Website</a>
+                            <a href="https://iyte-aritmetik.github.io/iytearitmetik/index.html" class="btn-project" target="_blank" rel="noopener"><i class="fa fa-external-link"></i> Website</a>
                         </div>
                        
                         
                         <div class="project-card">
                             <span class="project-tag">Web Development</span>
                             <h3 class="project-title">This CV Website</h3>
+                            <p class="project-description">The personal website you're currently viewing, built from scratch with HTML, CSS and vanilla JavaScript.</p>
                             <div class="tech-stack">
                                 <span class="tech-item"><i class="fa fa-code"></i> HTML/CSS</span>
                                 <span class="tech-item"><i class="fa fa-bolt"></i> JavaScript</span>
-                                
                             </div>
-                            <a href="#" class="btn-project"><i class="fa fa-external-link"></i> You are already here!</a>
+                            <span class="btn-project" aria-disabled="true"><i class="fa fa-check"></i> You're already here</span>
                         </div>
 
                     </div>

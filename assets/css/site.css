@@ -1,0 +1,96 @@
+/* Shared site chrome: header nav, return-home button, footer, page hero.
+   Pulled out of the per-page inline <style> blocks so every page stays in sync. */
+
+body { opacity: 1 !important; visibility: visible !important; }
+.preloader { display: none !important; }
+
+/* HEADER NAVIGATION */
+.navbar-header { float: left; }
+.navbar-nav { margin-top: 12px; margin-bottom: 0; }
+.navbar-nav li a {
+    border: 1px solid #333 !important;
+    padding: 8px 18px !important;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: #333 !important;
+    background: transparent;
+}
+.navbar-nav li a:hover {
+    background: #333 !important;
+    color: #fff !important;
+}
+.navbar-nav li.active a,
+.navbar-nav li a[aria-current="page"] {
+    background: #333 !important;
+    color: #fff !important;
+}
+
+/* RETURN-HOME BUTTON (sub-pages only) */
+.btn-return-home {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 20px;
+    border: 2px solid #333;
+    background: #333;
+    color: #fff !important;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-return-home:hover {
+    background: transparent;
+    color: #333 !important;
+    text-decoration: none;
+}
+.btn-return-home i { margin-right: 8px; }
+
+/* Visible keyboard focus for every interactive element */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #333;
+    outline-offset: 2px;
+}
+
+/* PAGE HERO (Projects, Events) */
+.main-page-header {
+    padding: 80px 0 40px;
+    text-align: center;
+    background: #fdfdfd;
+    border-bottom: 1px solid #eee;
+}
+.main-page-header h1 {
+    font-weight: 700;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #222;
+    margin: 0;
+}
+.main-page-header .underline {
+    width: 60px;
+    height: 4px;
+    background: #333;
+    margin: 20px auto 0;
+}
+.main-page-header p {
+    max-width: 60ch;
+    margin: 20px auto 0;
+    color: #666;
+    font-size: 15px;
+}
+
+.footer { padding: 40px 0; border-top: 1px solid #eee; }
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
