@@ -26,6 +26,8 @@
         .section-header { border-bottom: 2px solid #ddd; margin-bottom: 20px; padding-bottom: 10px; margin-top: 40px; text-transform: uppercase; letter-spacing: 1px; color: #333; font-weight: 700; }
         
         .contact-info { margin-bottom: 15px; line-height: 1.8; }
+        .contact-info a { color: #333; text-decoration: underline; }
+        .contact-label { color: #666; font-size: 12px; text-transform: uppercase; }
         
         /* CRUDE SKILLS BARS WITH YEARS */
         .skill-container { margin-bottom: 20px; }
@@ -67,30 +69,11 @@
 
         .interest-item { display: inline-block; background: #eee; padding: 5px 12px; margin-right: 5px; margin-bottom: 10px; font-size: 13px; border-radius: 2px; }
 
-        /* FIX: Force Menu to Front on Mobile */
-        #main_menu {
-            position: relative;
-            z-index: 9999 !important; /* Forces header to the top layer */
-        }
-
-        .navbar-collapse {
-            background-color: #ffffff !important; /* Ensures menu isn't transparent */
-            position: relative;
-            z-index: 10000 !important;
-            max-height: 100vh; /* Prevents menu from being cut off */
-        }
-
-        /* Ensure the main CV content stays behind the dropdown */
+        /* Keep CV content behind the mobile nav dropdown */
         .cv-section {
             position: relative;
             z-index: 1;
         }
-
-        /* Fix for Bootstrap's container overflow */
-        .main_menu_bg {
-            overflow: visible !important;
-        }
-            
     </style>
 </head>
 
@@ -136,8 +119,8 @@
                     <p class="cv-subtitle">Mathematician</p>
                     
                     <div class="contact-info">
-                        <i class="fa fa-envelope"></i> dorukustundag@std.iyte.edu.tr<br>
-                        <i class="fa fa-envelope"></i> dorukustundag5@hotmail.com<br>
+                        <i class="fa fa-envelope"></i> <a href="mailto:dorukustundag@std.iyte.edu.tr">dorukustundag@std.iyte.edu.tr</a> <span class="contact-label">(academic)</span><br>
+                        <i class="fa fa-envelope"></i> <a href="mailto:dorukustundag5@hotmail.com">dorukustundag5@hotmail.com</a> <span class="contact-label">(personal)</span><br>
                         <i class="fa fa-map-marker"></i> Izmir, Turkey
                     </div>
 
@@ -186,7 +169,7 @@
                     <div class="skill-container">
                         <span class="skill-label">Mathematica, R</span>
                         <div class="skill-grid">
-                            <div class="skill-year-box">0+ Years</div>
+                            <div class="skill-year-box">&lt;1 Year</div>
                             <div class="skill-bar-crude"><span class="skill-fill-crude" style="width: 20%"></span></div>
                         </div>
                     </div>

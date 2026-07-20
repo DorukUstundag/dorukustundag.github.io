@@ -48,8 +48,10 @@
             .contact-box p {
                 color: #666;
                 font-size: 14px;
-                word-break: break-all;
+                overflow-wrap: break-word;
             }
+            .contact-box p a { color: #333; text-decoration: underline; }
+            .email-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #666; font-weight: 700; }
             .btn-contact {
                 margin-top: 15px;
                 text-transform: uppercase;
@@ -112,8 +114,10 @@
                         <div class="contact-box">
                             <i class="fa fa-envelope-o contact-icon"></i>
                             <h3>Email</h3>
-                            <p>dorukustundag@std.iyte.edu.tr</p>
-                            <a href="mailto:dorukustundag@std.iyte.edu.tr" class="btn btn-default btn-contact">Send Email</a>
+                            <p><span class="email-label">Academic</span><br>
+                                <a href="mailto:dorukustundag@std.iyte.edu.tr">dorukustundag@std.iyte.edu.tr</a></p>
+                            <p><span class="email-label">Personal</span><br>
+                                <a href="mailto:dorukustundag5@hotmail.com">dorukustundag5@hotmail.com</a></p>
                         </div>
                     </div>
 

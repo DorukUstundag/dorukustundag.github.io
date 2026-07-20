@@ -51,6 +51,21 @@ body { opacity: 1 !important; visibility: visible !important; }
 }
 .btn-return-home i { margin-right: 8px; }
 
+/* Keep the mobile nav dropdown above page content on every page */
+#main_menu {
+    position: relative;
+    z-index: 100;
+}
+.navbar-collapse {
+    background-color: #ffffff !important;
+    position: relative;
+    z-index: 101;
+    max-height: 100vh;
+}
+.main_menu_bg {
+    overflow: visible !important;
+}
+
 /* Visible keyboard focus for every interactive element */
 a:focus-visible,
 button:focus-visible {
