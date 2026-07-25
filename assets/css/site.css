@@ -56,12 +56,6 @@ body { opacity: 1 !important; visibility: visible !important; }
     position: relative;
     z-index: 100;
 }
-.navbar-collapse {
-    background-color: #ffffff !important;
-    position: relative;
-    z-index: 101;
-    max-height: 100vh;
-}
 .main_menu_bg {
     overflow: visible !important;
 }
@@ -82,7 +76,7 @@ button:focus-visible {
 }
 .main-page-header h1 {
     font-weight: 700;
-    font-size: 42px;
+    font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #222;
@@ -102,6 +96,58 @@ button:focus-visible {
 }
 
 .footer { padding: 40px 0; border-top: 1px solid #eee; }
+
+/* Math blocks (Research/Talks pages) shouldn't force page-wide horizontal scroll on mobile */
+.katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* Compact header bar + tighter dropdown gap on mobile so the menu doesn't eat the fold */
+@media (max-width: 768px) {
+    .main_menu_bg {
+        height: 70px;
+    }
+    .main_menu_bg .nave_menu {
+        margin-top: 12px;
+    }
+    .navbar-default .navbar-collapse {
+        margin-top: 12px !important;
+    }
+    /* This theme's bootstrap.min.css was stripped of the stock mobile
+       .navbar-nav unfloat rule, so the menu stayed right-floated and
+       narrow instead of a full-width stacked panel. */
+    .navbar-header {
+        float: none;
+    }
+    .navbar-nav {
+        float: none !important;
+        margin: 0;
+    }
+    .navbar-nav > li {
+        float: none;
+    }
+    .navbar-nav li a {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 8px;
+        display: block;
+        text-align: center;
+    }
+    /* Open panel doesn't push page content down (fixed-height header +
+       overflow:visible), so give it full viewport height while open —
+       otherwise its white background falls short and page content
+       peeks out underneath it. Scoped to mobile + .in (open) only: a
+       global rule here previously painted an opaque full-width panel
+       over the desktop return-home button. */
+    .navbar-collapse.in {
+        background-color: #ffffff !important;
+        position: relative;
+        z-index: 101;
+        min-height: 100vh;
+        max-height: 100vh;
+    }
+}
 
 @media (prefers-reduced-motion: reduce) {
     * {

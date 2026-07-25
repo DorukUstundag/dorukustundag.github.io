@@ -55,6 +55,11 @@
             .event-type { font-size: 10px; text-transform: uppercase; color: #666; font-weight: 700; margin-bottom: 8px; display: block; }
             .event-title { font-weight: 700; margin-bottom: 8px; color: #222; font-size: 20px; }
             .event-location { font-size: 13px; color: #666; margin-bottom: 12px; }
+
+            @media (max-width: 480px) {
+                .event-card { flex-direction: column; }
+                .event-date-box { flex-direction: row; justify-content: center; gap: 8px; padding: 10px; }
+            }
         </style>
     </head>
     <body>
