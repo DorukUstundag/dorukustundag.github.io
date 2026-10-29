@@ -1,0 +1,334 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>HS-Class — Doruk Üstündağ</title>
+        <meta name="description" content="HS-Class: hands-on AI and mathematics workshops for learners aged 9+, based at İYTE Teknopark, İzmir. Co-founded by Haydar Göral and Doruk Üstündağ.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+        <link rel="canonical" href="https://dorukustundag.github.io/hs-class.html">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="HS-Class — Doruk Üstündağ">
+        <meta property="og:description" content="Hands-on AI and mathematics workshops for learners aged 9+, based at İYTE Teknopark, İzmir.">
+        <meta property="og:url" content="https://dorukustundag.github.io/hs-class.html">
+        <meta property="og:image" content="https://dorukustundag.github.io/assets/images/hs-class-logo.png">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+        <link rel="stylesheet" href="assets/css/site.css">
+
+        <style>
+            /* HS-CLASS PAGE: site's monochrome layout + hs-class.com navy/blue/teal */
+            .hs-page {
+                --hs-navy: #0b1a3a;
+                --hs-blue: #2563eb;
+                --hs-teal: #2fb8d8;
+                --hs-tint: #f5f8ff;
+                --hs-muted: #4a5675;
+                color: var(--hs-navy);
+            }
+            .hs-page a { color: var(--hs-blue); }
+
+            .hs-hero {
+                padding: 80px 0 70px;
+                text-align: center;
+                background: linear-gradient(180deg, #fff 0%, var(--hs-tint) 100%);
+                border-bottom: 1px solid #e3e9f7;
+            }
+            .hs-logo { max-width: 460px; width: 100%; height: auto; margin: 0 auto 30px; display: block; }
+            .hs-hero h1 { font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 26px; margin: 0 0 15px; }
+            .hs-hero .hs-lead { color: var(--hs-muted); font-size: 16px; max-width: 640px; margin: 0 auto 30px; line-height: 1.7; }
+            .hs-badge {
+                display: inline-block;
+                font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+                color: var(--hs-navy); background: #fff;
+                border: 1px solid #d6e0f5; border-radius: 20px;
+                padding: 6px 14px; margin: 0 4px 8px;
+            }
+            .hs-badge i { color: var(--hs-teal); margin-right: 5px; }
+
+            .hs-btn {
+                display: inline-block;
+                text-transform: uppercase; font-size: 12px; font-weight: 700; letter-spacing: 1px;
+                padding: 11px 24px; border-radius: 4px; margin: 6px 4px;
+                border: 2px solid var(--hs-navy);
+                transition: all 0.3s ease;
+            }
+            .hs-page .hs-btn-primary { background: var(--hs-navy); color: #fff; }
+            .hs-page .hs-btn-primary:hover, .hs-page .hs-btn-primary:focus { background: var(--hs-blue); border-color: var(--hs-blue); color: #fff; text-decoration: none; }
+            .hs-page .hs-btn-ghost { background: transparent; color: var(--hs-navy); }
+            .hs-page .hs-btn-ghost:hover, .hs-page .hs-btn-ghost:focus { border-color: var(--hs-teal); color: var(--hs-navy); text-decoration: none; }
+
+            .hs-section { padding: 70px 0; }
+            .hs-section.alt { background: var(--hs-tint); }
+            .hs-section h2 {
+                font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;
+                text-align: center; margin: 0 0 12px;
+            }
+            .hs-underline { width: 50px; height: 3px; margin: 0 auto 40px; background: linear-gradient(90deg, var(--hs-navy), var(--hs-teal)); }
+            .hs-section .hs-intro { color: var(--hs-muted); text-align: center; max-width: 700px; margin: -20px auto 40px; line-height: 1.7; }
+
+            .hs-card {
+                background: #fff;
+                border: 1px solid #e3e9f7;
+                border-bottom: 4px solid #e3e9f7;
+                padding: 32px 22px;
+                text-align: center;
+                margin-bottom: 30px;
+                transition: all 0.3s ease;
+            }
+            .hs-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(11, 26, 58, 0.07);
+                border-bottom-color: var(--hs-teal);
+            }
+            .hs-card .hs-icon { font-size: 34px; color: var(--hs-blue); margin-bottom: 18px; display: block; }
+            .hs-card h3 { font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; margin: 0 0 12px; }
+            .hs-card p { color: var(--hs-muted); font-size: 14px; line-height: 1.7; margin: 0; overflow-wrap: break-word; }
+
+            .hs-age { font-size: 30px; font-weight: 700; color: var(--hs-navy); display: block; margin-bottom: 8px; }
+
+            .hs-roadmap { list-style: none; padding: 0; margin: 0 auto; max-width: 720px; text-align: center; }
+            .hs-roadmap li {
+                display: inline-block; margin: 0 4px 10px;
+                padding: 8px 16px; border-radius: 4px;
+                font-size: 13px; font-weight: 700;
+                background: #fff; border: 1px solid #e3e9f7;
+            }
+            .hs-roadmap li.done { border-color: var(--hs-teal); }
+            .hs-roadmap li.done i { color: var(--hs-teal); margin-right: 6px; }
+            .hs-roadmap li.next { color: var(--hs-muted); border-style: dashed; }
+
+            .hs-founder { text-align: left; }
+            .hs-founder .hs-role { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--hs-blue); margin-bottom: 12px; display: block; }
+
+            .hs-contact .hs-card p a { color: var(--hs-navy); text-decoration: underline; }
+
+            .footer { margin-top: 0; }
+
+            @media (max-width: 767px) {
+                .hs-hero { padding: 50px 0 45px; }
+                .hs-hero h1 { font-size: 20px; }
+                .hs-section { padding: 50px 0; }
+            }
+        </style>
+    </head>
+    <body>
+
+        <header id="main_menu" class="header">
+            <div class="main_menu_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="nave_menu">
+                            <nav class="navbar navbar-default" id="navmenu">
+                                <div class="container-fluid">
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="bs-example-navbar-collapse-1">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                                        </button>
+                                        <a class="btn-return-home" href="index.html">
+                                            <i class="fa fa-chevron-left"></i> Return to Main Page
+                                        </a>
+                                    </div>
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a href="research.html">Research</a></li>
+                                            <li><a href="talks.html">Talks</a></li>
+                                            <li><a href="projects.html">Projects</a></li>
+                                            <li><a href="org_events.html">Events</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li class="active"><a href="hs-class.html" aria-current="page">HS-Class</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="hs-page">
+            <section class="hs-hero">
+                <div class="container">
+                    <img class="hs-logo" src="assets/images/hs-class-logo.png" alt="HS-Class — Artificial Intelligence &amp; Mathematics" width="1400" height="370">
+                    <h1>Learning AI Through Its Mathematics</h1>
+                    <p class="hs-lead">HS-Class runs hands-on workshops that teach the mathematics behind artificial intelligence and machine learning. Learners observe data, spot patterns, generalize, and build their own simple models.</p>
+                    <div>
+                        <span class="hs-badge"><i class="fa fa-map-marker"></i>İYTE Teknopark, İzmir</span>
+                        <span class="hs-badge"><i class="fa fa-users"></i>Ages 9+</span>
+                        <span class="hs-badge"><i class="fa fa-flask"></i>Small-group workshops</span>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a class="hs-btn hs-btn-primary" href="https://hs-class.com" target="_blank" rel="noopener">Visit hs-class.com</a>
+                        <a class="hs-btn hs-btn-ghost" href="#contact">Get in Touch</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hs-section">
+                <div class="container">
+                    <h2>How It Works</h2>
+                    <div class="hs-underline"></div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="hs-card">
+                                <i class="fa fa-users hs-icon"></i>
+                                <h3>In-Person Workshops</h3>
+                                <p>Small, applied groups where every learner works through the ideas by hand.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="hs-card">
+                                <i class="fa fa-code hs-icon"></i>
+                                <h3>Interactive Exercises</h3>
+                                <p>Mini-apps and browser-based Python exercises, with nothing to install.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="hs-card">
+                                <i class="fa fa-refresh hs-icon"></i>
+                                <h3>Integral Loop</h3>
+                                <p>A feedback system that measures progress and shares personalized roadmaps with learners, instructors, and parents.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="hs-card">
+                                <i class="fa fa-check-square-o hs-icon"></i>
+                                <h3>Instructor-Approved</h3>
+                                <p>AI-assisted feedback is always reviewed and approved by an instructor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hs-section alt">
+                <div class="container">
+                    <h2>Age Groups</h2>
+                    <div class="hs-underline"></div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="hs-card"><span class="hs-age">9–13</span><p>A first, intuitive look at data, patterns, and models.</p></div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="hs-card"><span class="hs-age">13–17</span><p>Deeper models and the mathematics that make them work.</p></div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="hs-card"><span class="hs-age">17+</span><p>A rigorous path from the foundations to deep learning.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hs-section">
+                <div class="container">
+                    <h2>Curriculum &amp; Vision</h2>
+                    <div class="hs-underline"></div>
+                    <p class="hs-intro">The goal is a solid mathematical foundation for AI. The first workshops cover core machine-learning tasks, and mathematics workshops come next.</p>
+                    <ul class="hs-roadmap">
+                        <li class="done"><i class="fa fa-check"></i>Classification</li>
+                        <li class="done"><i class="fa fa-check"></i>Recommendation</li>
+                        <li class="done"><i class="fa fa-check"></i>Regression</li>
+                        <li class="done"><i class="fa fa-check"></i>Basic Deep Learning</li>
+                        <li class="next">Calculus</li>
+                        <li class="next">Linear Algebra</li>
+                        <li class="next">Probability &amp; Statistics</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="hs-section alt">
+                <div class="container">
+                    <h2>Founders</h2>
+                    <div class="hs-underline"></div>
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="hs-card hs-founder">
+                                <h3>Assoc. Prof. Haydar Göral</h3>
+                                <span class="hs-role">Co-Founder · R&amp;D · AI Instructor</span>
+                                <p>Associate professor at İYTE with a PhD in mathematics from Université Claude Bernard Lyon 1. His research covers number theory, machine learning, and theoretical computer science.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="hs-card hs-founder">
+                                <h3>Doruk Üstündağ</h3>
+                                <span class="hs-role">Co-Founder · R&amp;D · Assistant</span>
+                                <p>Mathematics undergraduate at İYTE and research assistant to Assoc. Prof. Göral since 2024, working on number theory and machine learning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hs-section hs-contact" id="contact">
+                <div class="container">
+                    <h2>Contact &amp; Social</h2>
+                    <div class="hs-underline"></div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="hs-card">
+                                <i class="fa fa-phone hs-icon"></i>
+                                <h3>Phone</h3>
+                                <p><a href="tel:+905068557005">+90 506 855 7005</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="hs-card">
+                                <i class="fa fa-envelope-o hs-icon"></i>
+                                <h3>Email</h3>
+                                <p><a href="mailto:info@hs-class.com">info@hs-class.com</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="hs-card">
+                                <i class="fa fa-globe hs-icon"></i>
+                                <h3>Website</h3>
+                                <p><a href="https://hs-class.com" target="_blank" rel="noopener">hs-class.com</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="hs-card">
+                                <i class="fa fa-instagram hs-icon"></i>
+                                <h3>Instagram</h3>
+                                <p><a href="https://www.instagram.com/ai.hsclass" target="_blank" rel="noopener">@ai.hsclass</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="hs-card">
+                                <i class="fa fa-linkedin hs-icon"></i>
+                                <h3>LinkedIn</h3>
+                                <p><a href="https://www.linkedin.com/company/hs-class" target="_blank" rel="noopener">linkedin.com/company/hs-class</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="hs-card">
+                                <i class="fa fa-map-marker hs-icon"></i>
+                                <h3>Address</h3>
+                                <p>İYTE Teknopark, Gülbahçe Mah., Gülbahçe Cad., Teknoloji Geliştirme Bölümü No:1/18/5, 35430 Urla/İzmir</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container text-center">
+                <p>Made with <i class="fa fa-heart" style="color: #e74c3c;"></i> by Doruk Üstündağ 2026.</p>
+            </div>
+        </footer>
+
+        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+    </body>
+</html>
